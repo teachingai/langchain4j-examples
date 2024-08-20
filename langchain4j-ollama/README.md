@@ -35,56 +35,126 @@ dependencies {
 }
 ```
 
+
+
+
+
 #### Chat 属性
 
-`langchain4j.ollama` 前缀的属性，可让您配置 Ollama Chat 客户端的连接。
+`langchain4j.ollama.chat-model` 前缀的属性，可让您配置 Ollama Chat 客户端的连接。
 
 | 属性  | 描述 | 默认值  |
 | ------------ | ------------ | ------------ |
-| `langchain4j.ollama.base-url` | Ollama API 服务器运行的基本 URL. | `http://localhost:11434`  |
+| `langchain4j.ollama.language-model.base-url` | Ollama API 服务器运行的基本 URL. | `http://localhost:11434`  |
+| `langchain4j.ollama.language-model.model-name` | [支持的模型名称](https://github.com/ollama/ollama?tab=readme-ov-file#model-library "支持的模型名称"). | nomic-embed-text  |
+| `langchain4j.ollama.chat-model.model-namel`            | [支持的模型名称](https://github.com/ollama/ollama?tab=readme-ov-file#model-library "支持的模型名称"). | mistral  |
+| `langchain4j.ollama.chat-model.num-predict`            | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.seed`                   | 设置用于生成的随机数种子。将其设置为特定数字将使模型为相同的提示生成相同的文本。  | -1  |
+| `langchain4j.ollama.chat-model.top-k`                  | 减少产生废话的可能性。较高的值（例如，100）将给出更多样化的答案，而较低的值（例如，10）将更加保守。  | 40  |
+| `langchain4j.ollama.chat-model.top-p`                  | 与 top-k 一起工作。较高的值（例如，0.95）将导致更加多样化的文本，而较低的值（例如，0.5）将生成更加集中和保守的文本。  | 0.9  |
+| `langchain4j.ollama.chat-model.temperature`            | 模型的温度。提高温度将使模型的答案更有创意。 | 0.8  |
+| `langchain4j.ollama.chat-model.repeat-penalty`         | 设置惩罚重复的强度。较高的值（例如，1.5）将更强烈地惩罚重复，而较低的值（例如，0.9）将更宽松。 | 1.1  |
+| `langchain4j.ollama.chat-model.stop`                   | 设置要使用的停止序列。当遇到这种模式时，LLM 将停止生成文本并返回。可以通过在模型文件中指定多个单独的停止参数来设置多个停止模式。 | -  |
+| `langchain4j.ollama.chat-model.format`                 | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.timeout`                | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.max-retries`            | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.custom-headers`         | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.log-requests`           | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.log-responses`          | ???                                                             | 0  |
 
-`langchain4j.ollama.chat.options` 前缀的属性，可让您配置 Ollama Chat 客户端的连接。
+#### Streaming Chat 属性
 
-这些`options` 属性基于 [Ollama 有效参数和值](https://github.com/jmorganca/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values "Ollama 有效参数和值") 以及 [Ollama 类型](link:https://github.com/jmorganca/ollama/blob/main/api/types.go "Ollama 类型")。默认值基于：[Ollama type defaults](https://github.com/ollama/ollama/blob/b538dc3858014f94b099730a592751a5454cab0a/api/types.go#L364 "Ollama type defaults")。
+`langchain4j.ollama.streaming-chat-model` 前缀的属性，可让您配置 Ollama Chat 客户端的连接。
 
+| 属性                                                      | 描述 | 默认值  |
+|----------------------------------------------------------| ------------ | ------------ |
+| `langchain4j.ollama.streaming-chat-model.base-url`       | Ollama API 服务器运行的基本 URL. | `http://localhost:11434`  |
+| `langchain4j.ollama.streaming-chat-model.model-name`     | [支持的模型名称](https://github.com/ollama/ollama?tab=readme-ov-file#model-library "支持的模型名称"). | mistral  |
+| `langchain4j.ollama.streaming-chat-model.num-predict`    | ???                                                             | 0  |
+| `langchain4j.ollama.streaming-chat-model.seed`           | 设置用于生成的随机数种子。将其设置为特定数字将使模型为相同的提示生成相同的文本。  | -1  |
+| `langchain4j.ollama.streaming-chat-model.top-k`          | 减少产生废话的可能性。较高的值（例如，100）将给出更多样化的答案，而较低的值（例如，10）将更加保守。  | 40  |
+| `langchain4j.ollama.streaming-chat-model.top-p`          | 与 top-k 一起工作。较高的值（例如，0.95）将导致更加多样化的文本，而较低的值（例如，0.5）将生成更加集中和保守的文本。  | 0.9  |
+| `langchain4j.ollama.streaming-chat-model.temperature`    | 模型的温度。提高温度将使模型的答案更有创意。 | 0.8  |
+| `langchain4j.ollama.streaming-chat-model.repeat-penalty` | 设置惩罚重复的强度。较高的值（例如，1.5）将更强烈地惩罚重复，而较低的值（例如，0.9）将更宽松。 | 1.1  |
+| `langchain4j.ollama.streaming-chat-model.stop`           | 设置要使用的停止序列。当遇到这种模式时，LLM 将停止生成文本并返回。可以通过在模型文件中指定多个单独的停止参数来设置多个停止模式。 | -  |
+| `langchain4j.ollama.streaming-chat-model.format`         | ???                                                             | 0  |
+| `langchain4j.ollama.streaming-chat-model.timeout`        | ???                                                             | 0  |
+| `langchain4j.ollama.streaming-chat-model.max-retries`    | ???                                                             | 0  |
+| `langchain4j.ollama.streaming-chat-model.custom-headers` | ???                                                             | 0  |
+| `langchain4j.ollama.streaming-chat-model.log-requests`   | ???                                                             | 0  |
+| `langchain4j.ollama.streaming-chat-model.log-responses`  | ???                                                             | 0  |
+
+
+
+#### language-model 属性
+
+`langchain4j.ollama.language-model` 前缀的属性，可让您配置 Ollama Chat 客户端的连接。
+
+| 属性                                                      | 描述 | 默认值  |
+|----------------------------------------------------------| ------------ | ------------ |
+| `langchain4j.ollama.chat-model.base-url`                 | Ollama API 服务器运行的基本 URL. | `http://localhost:11434`  |
+| `langchain4j.ollama.chat-model.model-namel`              | [支持的模型名称](https://github.com/ollama/ollama?tab=readme-ov-file#model-library "支持的模型名称"). | mistral  |
+| `langchain4j.ollama.chat-model.num-predict`              | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.seed`                     | 设置用于生成的随机数种子。将其设置为特定数字将使模型为相同的提示生成相同的文本。  | -1  |
+| `langchain4j.ollama.chat-model.top-k`                    | 减少产生废话的可能性。较高的值（例如，100）将给出更多样化的答案，而较低的值（例如，10）将更加保守。  | 40  |
+| `langchain4j.ollama.chat-model.top-p`                    | 与 top-k 一起工作。较高的值（例如，0.95）将导致更加多样化的文本，而较低的值（例如，0.5）将生成更加集中和保守的文本。  | 0.9  |
+| `langchain4j.ollama.chat-model.temperature`              | 模型的温度。提高温度将使模型的答案更有创意。 | 0.8  |
+| `langchain4j.ollama.chat-model.repeat-penalty`           | 设置惩罚重复的强度。较高的值（例如，1.5）将更强烈地惩罚重复，而较低的值（例如，0.9）将更宽松。 | 1.1  |
+| `langchain4j.ollama.chat-model.stop`                     | 设置要使用的停止序列。当遇到这种模式时，LLM 将停止生成文本并返回。可以通过在模型文件中指定多个单独的停止参数来设置多个停止模式。 | -  |
+| `langchain4j.ollama.chat-model.format`                   | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.timeout`                  | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.max-retries`              | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.custom-headers`           | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.log-requests`             | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.log-responses`            | ???                                                             | 0  |
+
+
+#### Chat 属性
+
+`langchain4j.ollama.chat-model` 前缀的属性，可让您配置 Ollama Chat 客户端的连接。
+
+| 属性                                                      | 描述 | 默认值  |
+|----------------------------------------------------------| ------------ | ------------ |
+| `langchain4j.ollama.chat-model.base-url`                 | Ollama API 服务器运行的基本 URL. | `http://localhost:11434`  |
+| `langchain4j.ollama.chat-model.model-namel`              | [支持的模型名称](https://github.com/ollama/ollama?tab=readme-ov-file#model-library "支持的模型名称"). | mistral  |
+| `langchain4j.ollama.chat-model.num-predict`              | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.seed`                     | 设置用于生成的随机数种子。将其设置为特定数字将使模型为相同的提示生成相同的文本。  | -1  |
+| `langchain4j.ollama.chat-model.top-k`                    | 减少产生废话的可能性。较高的值（例如，100）将给出更多样化的答案，而较低的值（例如，10）将更加保守。  | 40  |
+| `langchain4j.ollama.chat-model.top-p`                    | 与 top-k 一起工作。较高的值（例如，0.95）将导致更加多样化的文本，而较低的值（例如，0.5）将生成更加集中和保守的文本。  | 0.9  |
+| `langchain4j.ollama.chat-model.temperature`              | 模型的温度。提高温度将使模型的答案更有创意。 | 0.8  |
+| `langchain4j.ollama.chat-model.repeat-penalty`           | 设置惩罚重复的强度。较高的值（例如，1.5）将更强烈地惩罚重复，而较低的值（例如，0.9）将更宽松。 | 1.1  |
+| `langchain4j.ollama.chat-model.stop`                     | 设置要使用的停止序列。当遇到这种模式时，LLM 将停止生成文本并返回。可以通过在模型文件中指定多个单独的停止参数来设置多个停止模式。 | -  |
+| `langchain4j.ollama.chat-model.format`                   | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.timeout`                  | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.max-retries`              | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.custom-headers`           | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.log-requests`             | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.log-responses`            | ???                                                             | 0  |
+
+
+#### Embedding 属性
+
+`langchain4j.ollama.embedding-model` 前缀的属性，可让您配置 Ollama Embedding 客户端的连接。
 
 | 属性  | 描述 | 默认值  |
 | ------------ | ------------ | ------------ |
-| `langchain4j.ollama.chat.enabled`      | 启用 Ollama 聊天客户端. | true  |
-| `langchain4j.ollama.chat.options.model`  | [支持的模型名称](https://github.com/ollama/ollama?tab=readme-ov-file#model-library "支持的模型名称"). | mistral  |
-| `langchain4j.ollama.chat.options.numa`              | 是否使用NUMA。                                          | false  |
-| `langchain4j.ollama.chat.options.num-ctx`           | 设置用于生成下一个标记的上下文窗口的大小。 | 2048  |
-| `langchain4j.ollama.chat.options.num-batch`         | ???                                                             | 512  |
-| `langchain4j.ollama.chat.options.num-gqa`           | Transformer 层中 GQA 组的数量。某些型号需要，例如：llama2:70b 为 8。 | 1  |
-| `langchain4j.ollama.chat.options.num-gpu`           | 要发送到 GPU 的层数。在 macOS 上，默认为 1 启用金属支持，0 禁用。这里的1表示 `NumGPU` 应该动态设置 | -1  |
-| `langchain4j.ollama.chat.options.main-gpu`          | ???                                                             | -  |
-| `langchain4j.ollama.chat.options.low-vram`          | ???                                                             | false  |
-| `langchain4j.ollama.chat.options.f16-kv`            | ???                                                             | true  |
-| `langchain4j.ollama.chat.options.logits-all`        | ???                                                             | -  |
-| `langchain4j.ollama.chat.options.vocab-only`        | ???                                                             | -  |
-| `langchain4j.ollama.chat.options.use-mmap`          | ???                                                             | true  |
-| `langchain4j.ollama.chat.options.use-mlock`         | ???                                                             | false  |
-| `langchain4j.ollama.chat.options.embedding-only`    | ???                                                             | false  |
-| `langchain4j.ollama.chat.options.rope-frequency-base` | ???                                                           | 10000.0  |
-| `langchain4j.ollama.chat.options.rope-frequency-scale` | ???                                                          | 1.0  |
-| `langchain4j.ollama.chat.options.num-thread`        | 设置计算期间使用的线程数。默认情况下，Ollama 将检测到这一点以获得最佳性能。建议将此值设置为系统具有的物理 CPU 核心数（而不是逻辑核心数）。 0 = 让运行时决定 | 0  |
-| `langchain4j.ollama.chat.options.num-keep`          | ???                                                             | 0  |
-| `langchain4j.ollama.chat.options.seed`              | 设置用于生成的随机数种子。将其设置为特定数字将使模型为相同的提示生成相同的文本。  | -1  |
-| `langchain4j.ollama.chat.options.num-predict`       | 生成文本时要预测的最大标记数。 （-1 = 无限生成，-2 = 填充上下文） | -1  |
-| `langchain4j.ollama.chat.options.top-k`             | 减少产生废话的可能性。较高的值（例如，100）将给出更多样化的答案，而较低的值（例如，10）将更加保守。  | 40  |
-| `langchain4j.ollama.chat.options.top-p`             | 与 top-k 一起工作。较高的值（例如，0.95）将导致更加多样化的文本，而较低的值（例如，0.5）将生成更加集中和保守的文本。  | 0.9  |
-| `langchain4j.ollama.chat.options.tfs-z`             | Tail-free 用于减少输出中不太可能的标记的影响。较高的值（例如，2.0）将更多地减少影响，而值 1.0 将禁用此设置。 | 1.0  |
-| `langchain4j.ollama.chat.options.typical-p`         | ???                                                             | 1.0  |
-| `langchain4j.ollama.chat.options.repeat-last-n`     | 设置模型回溯多远以防止重复。 （默认值：64，0 = 禁用，-1 = num_ctx）   | 64  |
-| `langchain4j.ollama.chat.options.temperature`       | 模型的温度。提高温度将使模型的答案更有创意。 | 0.8  |
-| `langchain4j.ollama.chat.options.repeat-penalty`    | 设置惩罚重复的强度。较高的值（例如，1.5）将更强烈地惩罚重复，而较低的值（例如，0.9）将更宽松。 | 1.1  |
-| `langchain4j.ollama.chat.options.presence-penalty`  | ???                                                             | 0.0  |
-| `langchain4j.ollama.chat.options.frequency-penalty` | ???                                                             | 0.0  |
-| `langchain4j.ollama.chat.options.mirostat`          | 启用 Mirostat 采样以控制困惑度。 （默认值：0、0 = 禁用、1 = Mirostat、2 = Mirostat 2.0） | 0  |
-| `langchain4j.ollama.chat.options.mirostat-tau`      | 影响算法对生成文本反馈的响应速度。较低的学习率将导致调整速度较慢，而较高的学习率将使算法更具响应性。 | 5.0  |
-| `langchain4j.ollama.chat.options.mirostat-eta`      | 控制输出的一致性和多样性之间的平衡。较低的值将导致文本更加集中和连贯。 | 0.1  |
-| `langchain4j.ollama.chat.options.penalize-newline`  | ???                                                           | true  |
-| `langchain4j.ollama.chat.options.stop`              | 设置要使用的停止序列。当遇到这种模式时，LLM 将停止生成文本并返回。可以通过在模型文件中指定多个单独的停止参数来设置多个停止模式。 | -  |
+| `langchain4j.ollama.embedding-model.base-url` | Ollama API 服务器运行的基本 URL. | `http://localhost:11434`  |
+| `langchain4j.ollama.embedding-model.model-name` | [支持的Embedding模型名称](https://github.com/ollama/ollama?tab=readme-ov-file#model-library "支持的Embedding模型名称"). | nomic-embed-text  |
+| `langchain4j.ollama.chat-model.model-namel`            | [支持的模型名称](https://github.com/ollama/ollama?tab=readme-ov-file#model-library "支持的模型名称"). | mistral  |
+| `langchain4j.ollama.chat-model.num-predict`            | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.seed`                   | 设置用于生成的随机数种子。将其设置为特定数字将使模型为相同的提示生成相同的文本。  | -1  |
+| `langchain4j.ollama.chat-model.top-k`                  | 减少产生废话的可能性。较高的值（例如，100）将给出更多样化的答案，而较低的值（例如，10）将更加保守。  | 40  |
+| `langchain4j.ollama.chat-model.top-p`                  | 与 top-k 一起工作。较高的值（例如，0.95）将导致更加多样化的文本，而较低的值（例如，0.5）将生成更加集中和保守的文本。  | 0.9  |
+| `langchain4j.ollama.chat-model.temperature`            | 模型的温度。提高温度将使模型的答案更有创意。 | 0.8  |
+| `langchain4j.ollama.chat-model.repeat-penalty`         | 设置惩罚重复的强度。较高的值（例如，1.5）将更强烈地惩罚重复，而较低的值（例如，0.9）将更宽松。 | 1.1  |
+| `langchain4j.ollama.chat-model.stop`                   | 设置要使用的停止序列。当遇到这种模式时，LLM 将停止生成文本并返回。可以通过在模型文件中指定多个单独的停止参数来设置多个停止模式。 | -  |
+| `langchain4j.ollama.chat-model.format`                 | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.timeout`                | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.max-retries`            | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.custom-headers`         | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.log-requests`           | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.log-responses`          | ???                                                             | 0  |
+
 
 **提示**: 所有 `langchain4j.ollama.chat.options` 前缀的属性， 可以在运行期间通过添加特定请求参数到 `Prompt` 调用 实现覆盖.
 
@@ -333,3 +403,14 @@ Gemma 有两种2b尺寸7b：
 ```shell
 ollama run gemma:2b
 ```
+
+
+ 
+
+
+By implementing StreamingResponseHandler, you can define actions for the following events:
+
+When the next token is generated: onNext(String token) is invoked. For instance, you can send the token directly to the UI as soon as it becomes available.
+When the LLM has completed generation: onComplete(Response<T> response) is invoked. Here, T stands for AiMessage in the case of StreamingChatLanguageModel, and String for StreamingLanguageModel. The Response object contains the complete response.
+When an error occurs: onError(Throwable error) is invoked.
+Below is an example of how to implement streaming with StreamingChatLanguageModel:

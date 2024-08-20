@@ -33,6 +33,30 @@ dependencies {
 }
 ```
 
+#### Embedding 属性
+
+`langchain4j.ollama.embedding-model` 前缀的属性，可让您配置 Ollama Embedding 客户端的连接。
+
+| 属性  | 描述 | 默认值  |
+| ------------ | ------------ | ------------ |
+| `langchain4j.ollama.embedding-model.base-url` | Ollama API 服务器运行的基本 URL. | `http://localhost:11434`  |
+| `langchain4j.ollama.embedding-model.model-name` | [支持的模型名称](https://github.com/ollama/ollama?tab=readme-ov-file#model-library "支持的模型名称"). | nomic-embed-text  |
+| `langchain4j.ollama.chat-model.model-namel`            | [支持的模型名称](https://github.com/ollama/ollama?tab=readme-ov-file#model-library "支持的模型名称"). | mistral  |
+| `langchain4j.ollama.chat-model.num-predict`            | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.seed`                   | 设置用于生成的随机数种子。将其设置为特定数字将使模型为相同的提示生成相同的文本。  | -1  |
+| `langchain4j.ollama.chat-model.top-k`                  | 减少产生废话的可能性。较高的值（例如，100）将给出更多样化的答案，而较低的值（例如，10）将更加保守。  | 40  |
+| `langchain4j.ollama.chat-model.top-p`                  | 与 top-k 一起工作。较高的值（例如，0.95）将导致更加多样化的文本，而较低的值（例如，0.5）将生成更加集中和保守的文本。  | 0.9  |
+| `langchain4j.ollama.chat-model.temperature`            | 模型的温度。提高温度将使模型的答案更有创意。 | 0.8  |
+| `langchain4j.ollama.chat-model.repeat-penalty`         | 设置惩罚重复的强度。较高的值（例如，1.5）将更强烈地惩罚重复，而较低的值（例如，0.9）将更宽松。 | 1.1  |
+| `langchain4j.ollama.chat-model.stop`                   | 设置要使用的停止序列。当遇到这种模式时，LLM 将停止生成文本并返回。可以通过在模型文件中指定多个单独的停止参数来设置多个停止模式。 | -  |
+| `langchain4j.ollama.chat-model.format`                 | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.timeout`                | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.max-retries`            | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.custom-headers`         | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.log-requests`           | ???                                                             | 0  |
+| `langchain4j.ollama.chat-model.log-responses`          | ???                                                             | 0  |
+
+
 ### Ollama Embedding 模型
 
 > 基于 Ollama 学习 Embedding ，需要支持 Embedding 的模型。 以下我们选择了几个专用的 Embedding 的模型。

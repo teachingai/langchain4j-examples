@@ -13,9 +13,13 @@ public class OllamaEmbeddingTest1 {
      * 下面代码依赖 langchain4j-pdf-document-reader 和 pdfbox（3.0.2）
      */
     public static void main(String[] args) {
+        /**
+         * 1、加载 llama2.pdf
+         */
+        PdfDocumentLoader pdfDocumentLoader = new PdfDocumentLoader("classpath:/llama2.pdf");
 
         /**
-         * 1、解析 llama2.pdf
+         * 2、解析 llama2.pdf
          */
         ParagraphPdfDocumentReader pdfReader = new ParagraphPdfDocumentReader("classpath:/llama2.pdf",
                 PdfDocumentReaderConfig.builder()
@@ -26,7 +30,7 @@ public class OllamaEmbeddingTest1 {
                         .withPagesPerDocument(1)
                         .build());
         /**
-         * 2、读取并处理PDF文档以提取段落。
+         * 3、读取并处理PDF文档以提取段落。
          */
         List<Document> documents = pdfReader.get();
         for (Document document : documents) {
