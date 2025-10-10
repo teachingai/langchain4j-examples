@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.0</version>
+        <version>3.5.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -15,15 +15,15 @@
     <packaging>pom</packaging>
 
     <name>langchain4j-examples</name>
-    <description>Example For Spring AI</description>
+    <description>Example For Langchain4j</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <fastjson2.version>2.0.52</fastjson2.version>
+        <fastjson2.version>2.0.57</fastjson2.version>
 		<java.version>17</java.version>
         <jsonschema.version>4.36.0</jsonschema.version>
-        <langchain4j.version>0.33.0</langchain4j.version>
+        <langchain4j.version>1.7.1</langchain4j.version>
         <testcontainers.version>1.20.1</testcontainers.version>
     </properties>
 
@@ -155,6 +155,14 @@
                 <groupId>com.github.victools</groupId>
                 <artifactId>jsonschema-module-swagger-2</artifactId>
                 <version>${jsonschema.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-bom -->
+            <dependency>
+                <groupId>dev.langchain4j</groupId>
+                <artifactId>langchain4j-bom</artifactId>
+                <version>${langchain4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <!-- Langchain4j Base -->
             <dependency>
