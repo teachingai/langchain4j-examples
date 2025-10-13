@@ -13,7 +13,7 @@
     <description>langchain4j-ollama</description>
 
     <dependencies>
-        <!-- For Spring AI Common -->
+        <!-- For Langchain4j Common -->
         <dependency>
             <groupId>com.github.teachingai</groupId>
             <artifactId>langchain4j-common</artifactId>

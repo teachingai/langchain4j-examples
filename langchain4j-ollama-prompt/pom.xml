@@ -13,52 +13,53 @@
     <description>langchain4j-ollama-prompt</description>
 
     <dependencies>
-        <!-- For Lombok -->
+        <!-- For Langchain4j Common -->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>com.github.teachingai</groupId>
+            <artifactId>langchain4j-common</artifactId>
+            <version>${project.version}</version>
         </dependency>
-        <!-- For Commons -->
+        <!-- For Chat Completion & Embedding -->
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-ollama-spring-boot-starter</artifactId>
         </dependency>
-        <!-- For Caffeine -->
+        <!-- For LLM Observe: Langchain4j + LangFuse + Byte Buddy + AOP
         <dependency>
-            <groupId>com.github.ben-manes.caffeine</groupId>
-            <artifactId>caffeine</artifactId>
-        </dependency>
-        <!-- For FastJson2 -->
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-langfuse-spring-boot-starter</artifactId>
+        </dependency> -->
+        <!-- For Validation -->
         <dependency>
-            <groupId>com.alibaba.fastjson2</groupId>
-            <artifactId>fastjson2</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- For Log4j2 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
-        <!-- For Chat Completion -->
+        <!-- For Knife4j -->
         <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-ollama-spring-boot-starter</artifactId>
-        </dependency>
-        <!-- For springdoc -->
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
-            <version>2.5.0</version>
-        </dependency>
-        <!-- For Web Server -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
             <exclusions>
                 <exclusion>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                    <groupId>org.springframework.boot</groupId>
+                    <groupId>org.springdoc</groupId>
+                    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${springdoc.version}</version>
         </dependency>
         <!-- For Embed Tomcat -->
         <!-- <dependency>
@@ -92,10 +93,9 @@
             <scope>test</scope>
         </dependency>
         <!-- For Testcontainers : https://testcontainers.com/ -->
-        <!-- Testcontainers is an open source framework for providing throwaway, lightweight instances of databases, message brokers, web browsers, or just about anything that can run in a Docker container. -->
         <dependency>
             <groupId>org.testcontainers</groupId>
-            <artifactId>chromadb</artifactId>
+            <artifactId>ollama</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
