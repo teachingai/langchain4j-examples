@@ -8,7 +8,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>langchain4j-ollama-langfuse</artifactId>
+    <artifactId>langchain4j-ollama-observation-langfuse</artifactId>
     <name>langchain4j-ollama-langfuse</name>
     <description>langchain4j-ollama-langfuse</description>
 

@@ -8,11 +8,12 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>langchain4j-ollama</artifactId>
-    <name>langchain4j-ollama</name>
-    <description>langchain4j-ollama</description>
+    <artifactId>langchain4j-ollama-observation-prometheus</artifactId>
+    <name>langchain4j-ollama-prometheus</name>
+    <description>langchain4j-ollama-prometheus</description>
 
     <dependencies>
+
         <!-- For Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -33,30 +34,12 @@
             <groupId>com.alibaba.fastjson2</groupId>
             <artifactId>fastjson2</artifactId>
         </dependency>
-        <!-- For Jsonschema -->
-        <dependency>
-            <groupId>com.github.victools</groupId>
-            <artifactId>jsonschema-generator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.victools</groupId>
-            <artifactId>jsonschema-module-jackson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.victools</groupId>
-            <artifactId>jsonschema-module-swagger-2</artifactId>
-        </dependency>
         <!-- For Log4j2 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
-        <!-- For LLM Observe: Langchain4j + LangFuse + Byte Buddy + AOP
-        <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-langfuse-spring-boot-starter</artifactId>
-        </dependency> -->
-        <!-- For Chat Completion & Embedding -->
+        <!-- For Chat Completion -->
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-ollama-spring-boot-starter</artifactId>
@@ -113,15 +96,13 @@
         <!-- Testcontainers is an open source framework for providing throwaway, lightweight instances of databases, message brokers, web browsers, or just about anything that can run in a Docker container. -->
         <dependency>
             <groupId>org.testcontainers</groupId>
-            <artifactId>testcontainers</artifactId>
+            <artifactId>chromadb</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>junit-jupiter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -130,6 +111,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>9</source>
+                    <target>9</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
