@@ -2,12 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
 
     <groupId>com.github.teachingai</groupId>
     <artifactId>langchain4j-examples</artifactId>
@@ -28,6 +22,7 @@
         <guava.version>33.4.8-jre</guava.version>
         <fastjson2.version>2.0.58</fastjson2.version>
         <java.version>17</java.version>
+        <javalin.version>6.7.0</javalin.version>
         <jsonschema.version>4.36.0</jsonschema.version>
         <junit-jupiter.version>5.11.0</junit-jupiter.version>
         <knife4j.version>4.5.0</knife4j.version>

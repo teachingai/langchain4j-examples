@@ -1,6 +1,6 @@
 # langchain4j-examples
 
-> 本项目是 基于 [Spring Boot 3.x](https://docs.spring.io/spring-boot/index.html) 、[LangChain4j](https://github.com/langchain4j)](https://github.com/langchain4j) 的 `文本生成`、`多轮对话`、`提示工程`、`文本嵌入`、`函数调用`、`检索增强生成` 功能示例。
+> 本项目是 基于 [Javalin 6.x](https://javalin.io/documentation) 、[LangChain4j](https://github.com/langchain4j) 的 `文本生成`、`多轮对话`、`提示工程`、`文本嵌入`、`函数调用`、`检索增强生成` 功能示例。
 > 相比于 [LangChain4j 官方示例](https://github.com/langchain4j/langchain4j-examples)，本项目结合实际场景，更加直观、易懂，更加容易上手。
 
 
