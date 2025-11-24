@@ -171,6 +171,12 @@
                 <groupId>io.javalin</groupId>
                 <artifactId>javalin-bundle</artifactId>
                 <version>${javalin.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>logback-classic</artifactId>
+                        <groupId>ch.qos.logback</groupId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <!-- https://mvnrepository.com/artifact/io.javalin/javalin-rendering-commonmark -->
             <dependency>
