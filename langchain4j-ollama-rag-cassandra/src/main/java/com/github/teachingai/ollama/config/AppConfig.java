@@ -1,0 +1,41 @@
+package com.github.teachingai.ollama.config;
+
+import java.util.Properties;
+
+public class AppConfig {
+    private final Properties properties;
+
+    public AppConfig(Properties properties) {
+        this.properties = properties;
+    }
+
+    public String getProperty(String key, String defaultValue) {
+        return properties.getProperty(key, defaultValue);
+    }
+
+    public String getProperty(String key) {
+        return properties.getProperty(key);
+    }
+
+    public String getOllamaBaseUrl() {
+        return getProperty("langchain4j.ollama.chat-model.base-url", "http://localhost:11434");
+    }
+
+    public String getChatModel() {
+        return getProperty("langchain4j.ollama.chat-model.model-name", "qwen:7b");
+    }
+
+    public String getStreamingChatModel() {
+        return getProperty("langchain4j.ollama.streaming-chat-model.model-name", "qwen:7b");
+    }
+
+    public String getEmbeddingModel() {
+        return getProperty("langchain4j.ollama.embedding-model.model-name", "nomic-embed-text");
+    }
+
+    public Double getTemperature() {
+        String temp = getProperty("langchain4j.ollama.chat-model.temperature");
+        return temp != null ? Double.parseDouble(temp) : 0.7;
+    }
+}
+
