@@ -10,9 +10,10 @@ import dev.langchain4j.agent.tool.Tool;
 import lombok.extern.slf4j.Slf4j;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
-import org.springframework.http.HttpEntity;
-import org.springframework.web.client.RestClient;
-
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 /**
@@ -25,7 +26,7 @@ public class GetWeatherFunction {
     //请求连接地址
     private final static String SOJSON_WEATHER_URL = "http://t.weather.sojson.com/api/weather/city";
 
-    private final static RestClient restClient = RestClient.builder().baseUrl(SOJSON_WEATHER_URL).build();
+    private final static HttpClient httpClient = HttpClient.newHttpClient();
 
     private final LoadingCache<String, Optional<JSONObject>> WEATHER_DATA_CACHES = Caffeine.newBuilder()
             // 设置写缓存后1个小时过期
@@ -50,9 +51,13 @@ public class GetWeatherFunction {
 
                 @Override
                 public Optional<JSONObject> load(String city_code) throws Exception {
-                    HttpEntity<String> response = restClient.get().uri(String.format("/api/weather/city/%s", city_code))
-                            .retrieve().toEntity(String.class);
-                    String bodyString = response.getBody();
+                    String url = SOJSON_WEATHER_URL + "/" + city_code;
+                    HttpRequest request = HttpRequest.newBuilder()
+                            .uri(URI.create(url))
+                            .GET()
+                            .build();
+                    HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+                    String bodyString = response.body();
                     log.info("city_code {} >> weather :  {}", city_code, bodyString);
                     JSONObject jsonObject = JSONObject.parseObject(bodyString);
                     return Optional.ofNullable(jsonObject);

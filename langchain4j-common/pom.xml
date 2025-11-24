@@ -32,6 +32,11 @@
             <groupId>com.alibaba.fastjson2</groupId>
             <artifactId>fastjson2</artifactId>
         </dependency>
+        <!-- For Jackson JSON -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
         <!-- For Jsonschema -->
         <dependency>
             <groupId>com.github.victools</groupId>
@@ -44,6 +49,19 @@
         <dependency>
             <groupId>com.github.victools</groupId>
             <artifactId>jsonschema-module-swagger-2</artifactId>
+        </dependency>
+        <!-- For Log4j2 -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jul</artifactId>
         </dependency>
     </dependencies>
 

@@ -2,19 +2,16 @@ package com.github.teachingai.ollama.tools;
 
 import dev.langchain4j.agent.tool.ToolSpecification;
 import dev.langchain4j.agent.tool.ToolSpecifications;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static dev.langchain4j.agent.tool.JsonSchemaProperty.*;
 
-@Configuration
 public class FunctionConfig {
 
-    @Bean
-    public List<ToolSpecification> toolSpecifications() {
-        List<ToolSpecification> toolSpecifications = List.of();
+    public static List<ToolSpecification> createToolSpecifications() {
+        List<ToolSpecification> toolSpecifications = new ArrayList<>();
 
         toolSpecifications.add(ToolSpecification.builder()
                 .name("getWeather")

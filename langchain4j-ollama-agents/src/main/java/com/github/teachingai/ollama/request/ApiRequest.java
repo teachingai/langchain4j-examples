@@ -2,8 +2,7 @@ package com.github.teachingai.ollama.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.ai.model.ModelOptionsUtils;
-import org.springframework.boot.context.properties.bind.ConstructorBinding;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.List;
 import java.util.Map;
@@ -29,7 +28,6 @@ public class ApiRequest {
          * Create a tool of type 'function' and the given function definition.
          * @param function function definition.
          */
-        @ConstructorBinding
         public FunctionTool(Function function) {
             this(Type.FUNCTION, function);
         }
@@ -67,9 +65,17 @@ public class ApiRequest {
              * @param name tool function name.
              * @param jsonSchema tool function schema as json.
              */
-            @ConstructorBinding
             public Function(String description, String name, String jsonSchema) {
-                this(description, name, ModelOptionsUtils.jsonToMap(jsonSchema));
+                this(description, name, jsonToMap(jsonSchema));
+            }
+            
+            private static Map<String, Object> jsonToMap(String json) {
+                try {
+                    ObjectMapper mapper = new ObjectMapper();
+                    return mapper.readValue(json, Map.class);
+                } catch (Exception e) {
+                    throw new RuntimeException("Failed to parse JSON schema", e);
+                }
             }
         }
     }
@@ -195,7 +201,12 @@ public class ApiRequest {
              * Specifying a particular function forces the model to call that function.
              */
             public static String FUNCTION(String functionName) {
-                return ModelOptionsUtils.toJsonString(Map.of("type", "function", "function", Map.of("name", functionName)));
+                try {
+                    ObjectMapper mapper = new ObjectMapper();
+                    return mapper.writeValueAsString(Map.of("type", "function", "function", Map.of("name", functionName)));
+                } catch (Exception e) {
+                    throw new RuntimeException("Failed to convert to JSON string", e);
+                }
             }
         }
 

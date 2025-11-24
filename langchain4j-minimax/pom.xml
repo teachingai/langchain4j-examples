@@ -47,7 +47,7 @@
         </dependency>-->
         <dependency>
             <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-zhipu-ai</artifactId>
+            <artifactId>langchain4j-minimax</artifactId>
         </dependency>
         <dependency>
             <groupId>cn.bigmodel.openapi</groupId>
@@ -55,40 +55,15 @@
             <version>release-V4-2.0.2</version>
             <scope>test</scope>
         </dependency>
-        <!-- For Web Server -->
+        <!-- For Javalin -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                    <groupId>org.springframework.boot</groupId>
-                </exclusion>
-            </exclusions>
+            <groupId>io.javalin</groupId>
+            <artifactId>javalin-bundle</artifactId>
         </dependency>
-        <!-- For Embed Tomcat -->
-        <!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-        </dependency> -->
-        <!-- For Embed Jetty -->
-        <!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jetty</artifactId>
-        </dependency> -->
-        <!-- For Embed Undertow -->
+        <!-- For Test -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-undertow</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
+            <groupId>io.javalin</groupId>
+            <artifactId>javalin-testtools</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -96,8 +71,23 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.github.teachingai.Application</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
