@@ -22,8 +22,8 @@ public class Application {
         Javalin app = Javalin.create(javalinConfig -> {
             javalinConfig.jsonMapper(new JavalinJackson());
             javalinConfig.showJavalinBanner = false;
+            // javalinConfig.registerPlugin()
         });
-
         // 注册路由
         ChatRouter.register(app, config);
 

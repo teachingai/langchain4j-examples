@@ -6,7 +6,8 @@
     <parent>
         <groupId>com.github.teachingai</groupId>
         <artifactId>langchain4j-examples</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <groupId>com.tianyin</groupId>
@@ -48,7 +49,8 @@
         <!--<dependency>
             <groupId>com.github.teachingai</groupId>
             <artifactId>langchain4j-stepfun-spring-boot-starter</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
         </dependency>-->
         <!-- 注意：需要根据实际的langchain4j-stepfun库来调整依赖 -->
         <!-- For Javalin -->

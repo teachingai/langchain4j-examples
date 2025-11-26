@@ -16,7 +16,7 @@
     <dependency>
         <groupId>com.github.teachingai</groupId>
         <artifactId>langchain4j-common</artifactId>
-        <version>${project.version}</version>
+        <version>${revision}</version>
     </dependency>
     <!-- For Chat Completion & Embedding -->
     <dependency>

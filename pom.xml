@@ -28,6 +28,7 @@
         <maven-enforcer-plugin.version>3.5.0</maven-enforcer-plugin.version>
         <maven-gpg-plugin.version>3.2.6</maven-gpg-plugin.version>
         <maven-failsafe-plugin.version>3.0.0</maven-failsafe-plugin.version>
+        <maven-flatten-plugin.version>1.7.3</maven-flatten-plugin.version>
         <maven-help-plugin.version>3.5.0</maven-help-plugin.version>
         <maven-install-plugin.version>3.1.3</maven-install-plugin.version>
         <maven-invoker-plugin.version>3.8.0</maven-invoker-plugin.version>
@@ -48,11 +49,11 @@
         <google-protos.version>2.57.0</google-protos.version>
         <guava.version>33.4.8-jre</guava.version>
         <fastjson2.version>2.0.58</fastjson2.version>
-        <javalin.version>7.0.0-alpha.1</javalin.version>
+        <javalin.version>6.7.0</javalin.version>
         <jsonschema.version>4.36.0</jsonschema.version>
         <junit-jupiter.version>5.11.0</junit-jupiter.version>
         <knife4j.version>4.5.0</knife4j.version>
-        <langchain4j.version>1.7.1</langchain4j.version>
+        <langchain4j.version>1.8.0</langchain4j.version>
         <log4j2.version>2.25.2</log4j2.version>
         <pdfbox.version>3.0.5</pdfbox.version>
         <perf4j.version>0.9.16</perf4j.version>
@@ -420,6 +421,32 @@
                         </execution>
                     </executions>
                 </plugin>
+                <!-- https://mvnrepository.com/artifact/org.codehaus.mojo/flatten-maven-plugin -->
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>flatten-maven-plugin</artifactId>
+                    <version>${maven-flatten-plugin.version}</version>
+                    <configuration>
+                        <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                        <updatePomFile>true</updatePomFile>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>flatten</id>
+                            <phase>process-resources</phase>
+                            <goals>
+                                <goal>flatten</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>flatten.clean</id>
+                            <phase>clean</phase>
+                            <goals>
+                                <goal>clean</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
                 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-gpg-plugin -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -586,6 +613,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+            <!-- 模块版本管理插件 ：替换 ${revision} -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
             </plugin>
             <!-- 安装插件：将项目输出构件安装到本地仓库 -->
             <plugin>

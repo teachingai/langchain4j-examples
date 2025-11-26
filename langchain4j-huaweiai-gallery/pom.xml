@@ -5,7 +5,8 @@
     <parent>
         <groupId>com.github.teachingai</groupId>
         <artifactId>langchain4j-examples</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>langchain4j-huaweiai-gallery</artifactId>
@@ -50,7 +51,8 @@
        <!-- <dependency>
             <groupId>com.github.teachingai</groupId>
             <artifactId>langchain4j-huawei-ai</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
         </dependency>-->
         <!-- For Embedding  -->
         <dependency>

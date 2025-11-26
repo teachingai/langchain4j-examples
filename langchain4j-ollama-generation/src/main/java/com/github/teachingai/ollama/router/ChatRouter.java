@@ -7,12 +7,12 @@ import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;
 import dev.langchain4j.data.message.SystemMessage;
 import dev.langchain4j.data.message.UserMessage;
-import dev.langchain4j.model.chat.ChatLanguageModel;
-import dev.langchain4j.model.chat.StreamingChatLanguageModel;
+import dev.langchain4j.model.chat.ChatModel;
+import dev.langchain4j.model.chat.StreamingChatModel;
+import dev.langchain4j.model.chat.response.StreamingChatResponseHandler;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 import dev.langchain4j.model.ollama.OllamaStreamingChatModel;
 import dev.langchain4j.model.output.Response;
-import dev.langchain4j.model.output.StreamingResponseHandler;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
@@ -30,18 +30,24 @@ public class ChatRouter {
 
     public static void register(Javalin app, AppConfig config) {
         // 创建聊天模型
-        ChatLanguageModel chatModel = OllamaChatModel.builder()
+        ChatModel chatModel = OllamaChatModel.builder()
                 .baseUrl(config.getOllamaBaseUrl())
                 .modelName(config.getChatModel())
                 .temperature(config.getTemperature())
                 .build();
 
-        StreamingChatLanguageModel streamingChatModel = OllamaStreamingChatModel.builder()
+        StreamingChatModel streamingChatModel = OllamaStreamingChatModel.builder()
                 .baseUrl(config.getOllamaBaseUrl())
                 .modelName(config.getStreamingChatModel())
                 .temperature(config.getTemperature())
                 .build();
 
+        app.before(ctx -> {
+            // runs before all requests
+        });
+        app.before("/path/*", ctx -> {
+            // runs before request to /path/*
+        });
         // GET /v1/generate
         app.get("/v1/generate", new Handler() {
             @Override
@@ -50,7 +56,7 @@ public class ChatRouter {
                 if (message == null || message.isEmpty()) {
                     message = "Tell me a joke";
                 }
-                String response = chatModel.generate(message);
+                String response = chatModel.chat(message);
                 ctx.json(Map.of("generation", response));
             }
         });
@@ -84,7 +90,7 @@ public class ChatRouter {
                         ctx.header("Cache-Control", "no-cache");
                         ctx.header("Connection", "keep-alive");
                         
-                        streamingChatModel.generate(messages, new StreamingResponseHandler<AiMessage>() {
+                        streamingChatModel.chat(messages, new StreamingChatResponseHandler() {
                             @Override
                             public void onNext(String token) {
                                 try {
