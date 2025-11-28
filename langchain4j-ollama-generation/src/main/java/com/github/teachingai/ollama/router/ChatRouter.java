@@ -16,6 +16,7 @@ import dev.langchain4j.model.output.Response;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -64,7 +65,7 @@ public class ChatRouter {
         // POST /v1/chat/completions
         app.post("/v1/chat/completions", new Handler() {
             @Override
-            public void handle(Context ctx) throws Exception {
+            public void handle(@NotNull Context ctx) throws Exception {
                 try {
                     ApiRequest.ChatCompletionRequest chatRequest = ctx.bodyAsClass(ApiRequest.ChatCompletionRequest.class);
                     

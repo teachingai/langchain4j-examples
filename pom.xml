@@ -51,7 +51,7 @@
         <guava.version>33.4.8-jre</guava.version>
         <fastjson2.version>2.0.58</fastjson2.version>
         <javalin.version>6.7.0</javalin.version>
-        <jsonschema.version>4.36.0</jsonschema.version>
+        <jsonschema.version>4.38.0</jsonschema.version>
         <junit-jupiter.version>5.11.0</junit-jupiter.version>
         <knife4j.version>4.5.0</knife4j.version>
         <langchain4j.version>1.8.0</langchain4j.version>
@@ -64,6 +64,7 @@
     </properties>
 
     <modules>
+        <module>langchain4j-common</module>
         <module>langchain4j-anthropic</module>
         <module>langchain4j-azure-openai</module>
         <module>langchain4j-bedrockai</module>
@@ -113,7 +114,6 @@
         <module>langchain4j-zhipuai</module>
         <module>langchain4j-project-naming</module>
         <module>langchain4j-project-sql</module>
-        <module>langchain4j-common</module>
     </modules>
 
     <repositories>
@@ -676,6 +676,11 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
+                    </plugin>
+                    <!-- 模块版本管理插件 ：替换 ${revision} -->
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>flatten-maven-plugin</artifactId>
                     </plugin>
                     <!-- javadoc -->
                     <plugin>

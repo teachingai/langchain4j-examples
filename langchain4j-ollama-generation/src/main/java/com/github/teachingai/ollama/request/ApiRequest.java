@@ -3,7 +3,6 @@ package com.github.teachingai.ollama.request;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.teachingai.ollama.util.ModelOptionsUtils;
-import org.springframework.boot.context.properties.bind.ConstructorBinding;
 
 import java.util.List;
 import java.util.Map;
@@ -29,7 +28,6 @@ public class ApiRequest {
          * Create a tool of type 'function' and the given function definition.
          * @param function function definition.
          */
-        @ConstructorBinding
         public FunctionTool(Function function) {
             this(Type.FUNCTION, function);
         }
@@ -67,7 +65,6 @@ public class ApiRequest {
              * @param name tool function name.
              * @param jsonSchema tool function schema as json.
              */
-            @ConstructorBinding
             public Function(String description, String name, String jsonSchema) {
                 this(description, name, ModelOptionsUtils.jsonToMap(jsonSchema));
             }
