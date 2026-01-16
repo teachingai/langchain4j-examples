@@ -1,6 +1,6 @@
-package com.tianyin.stepfun.router;
+package io.ddd4j.stepfun.router;
 
-import com.tianyin.stepfun.config.AppConfig;
+import io.ddd4j.stepfun.config.AppConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

@@ -1,4 +1,4 @@
-package com.tianyin.stepfun.config;
+package io.ddd4j.stepfun.config;
 
 import java.util.Properties;
 

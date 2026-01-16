@@ -1,4 +1,4 @@
-package com.tianyin.stepfun;
+package io.ddd4j.stepfun;
 
 import com.github.hiwepy.stepfun.config.AppConfig;
 import com.github.hiwepy.stepfun.router.ChatRouter;
