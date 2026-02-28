@@ -25,7 +25,7 @@ public class AppConfig {
     }
 
     public String getChatModel() {
-        return getProperty("langchain4j.bedrock.chat.options.model", "anthropic.claude-3-sonnet-20240229-v1:0");
+        return getProperty("langchain4j.bedrock.chat.options.model", "anthropic.claude-3-sonnet-20240229-V1:0");
     }
 
     public Float getTemperature() {

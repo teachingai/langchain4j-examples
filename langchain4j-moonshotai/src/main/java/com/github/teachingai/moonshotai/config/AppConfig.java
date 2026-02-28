@@ -22,7 +22,7 @@ public class AppConfig {
     }
 
     public String getChatModel() {
-        return getProperty("langchain4j.moonshotai.chat.options.model", "moonshot-v1-8k");
+        return getProperty("langchain4j.moonshotai.chat.options.model", "moonshot-V1-8k");
     }
 
     public Double getTemperature() {

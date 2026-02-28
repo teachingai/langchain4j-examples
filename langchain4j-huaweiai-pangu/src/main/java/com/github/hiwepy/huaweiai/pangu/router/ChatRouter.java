@@ -56,8 +56,8 @@ public class ChatRouter {
             throw new RuntimeException("Failed to initialize HuaweiAI Pangu chat model", e);
         }
 
-        // GET /v1/generate
-        app.get("/v1/generate", new Handler() {
+        // GET /V1/generate
+        app.get("/V1/generate", new Handler() {
             @Override
             public void handle(Context ctx) throws Exception {
                 String message = ctx.queryParam("message");
@@ -69,8 +69,8 @@ public class ChatRouter {
             }
         });
 
-        // GET /v1/prompt
-        app.get("/v1/prompt", new Handler() {
+        // GET /V1/prompt
+        app.get("/V1/prompt", new Handler() {
             @Override
             public void handle(Context ctx) throws Exception {
                 String message = ctx.queryParam("message");
@@ -82,8 +82,8 @@ public class ChatRouter {
             }
         });
 
-        // POST /v1/chat/completions
-        app.post("/v1/chat/completions", new Handler() {
+        // POST /V1/chat/completions
+        app.post("/V1/chat/completions", new Handler() {
             @Override
             public void handle(Context ctx) throws Exception {
                 try {

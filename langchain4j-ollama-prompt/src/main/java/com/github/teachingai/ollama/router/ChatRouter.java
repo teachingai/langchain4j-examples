@@ -24,8 +24,8 @@ public class ChatRouter {
                 .temperature(config.getTemperature())
                 .build();
 
-        // GET /v1/prompt
-        app.get("/v1/prompt", new Handler() {
+        // GET /V1/prompt
+        app.get("/V1/prompt", new Handler() {
             @Override
             public void handle(Context ctx) throws Exception {
                 String message = ctx.queryParam("message");

@@ -575,7 +575,7 @@ public class ChatTtsAudioApi {
      * @return Response entity containing the audio binary.
      */
     public ResponseEntity<byte[]> createSpeech(SpeechRequest requestBody) {
-        return this.restClient.post().uri("/v1/audio/speech").body(requestBody).retrieve().toEntity(byte[].class);
+        return this.restClient.post().uri("/V1/audio/speech").body(requestBody).retrieve().toEntity(byte[].class);
     }
 
     /**
@@ -592,7 +592,7 @@ public class ChatTtsAudioApi {
     public Flux<ResponseEntity<byte[]>> stream(SpeechRequest requestBody) {
 
         return webClient.post()
-                .uri("/v1/audio/speech")
+                .uri("/V1/audio/speech")
                 .body(Mono.just(requestBody), SpeechRequest.class)
                 .accept(MediaType.APPLICATION_OCTET_STREAM)
                 .exchangeToFlux(clientResponse -> {
@@ -641,7 +641,7 @@ public class ChatTtsAudioApi {
         }
 
         return this.restClient.post()
-                .uri("/v1/audio/transcriptions")
+                .uri("/V1/audio/transcriptions")
                 .body(multipartBody)
                 .retrieve()
                 .toEntity(responseType);
@@ -680,7 +680,7 @@ public class ChatTtsAudioApi {
         multipartBody.add("temperature", requestBody.temperature());
 
         return this.restClient.post()
-                .uri("/v1/audio/translations")
+                .uri("/V1/audio/translations")
                 .body(multipartBody)
                 .retrieve()
                 .toEntity(responseType);

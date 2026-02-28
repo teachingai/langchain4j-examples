@@ -42,8 +42,8 @@ public class EmbeddingRouter {
 
         EmbeddingService embeddingService = new EmbeddingService(embeddingModel);
 
-        // GET /v1/embedding
-        app.get("/v1/embedding", new Handler() {
+        // GET /V1/embedding
+        app.get("/V1/embedding", new Handler() {
             @Override
             public void handle(Context ctx) throws Exception {
                 String text = ctx.queryParam("text");
@@ -56,8 +56,8 @@ public class EmbeddingRouter {
             }
         });
 
-        // POST /v1/embedding (文件上传)
-        app.post("/v1/embedding", new Handler() {
+        // POST /V1/embedding (文件上传)
+        app.post("/V1/embedding", new Handler() {
             @Override
             public void handle(Context ctx) throws Exception {
                 try {

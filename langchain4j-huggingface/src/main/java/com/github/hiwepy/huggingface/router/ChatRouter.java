@@ -29,8 +29,8 @@ public class ChatRouter {
                 .waitForModel(true)
                 .build();
 
-        // GET /v1/generate
-        app.get("/v1/generate", new Handler() {
+        // GET /V1/generate
+        app.get("/V1/generate", new Handler() {
             @Override
             public void handle(Context ctx) throws Exception {
                 String message = ctx.queryParam("message");

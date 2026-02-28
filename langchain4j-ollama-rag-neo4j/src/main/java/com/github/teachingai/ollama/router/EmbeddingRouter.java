@@ -20,8 +20,8 @@ public class EmbeddingRouter {
                 .modelName(config.getEmbeddingModel())
                 .build();
 
-        // GET /v1/embedding
-        app.get("/v1/embedding", new Handler() {
+        // GET /V1/embedding
+        app.get("/V1/embedding", new Handler() {
             @Override
             public void handle(Context ctx) throws Exception {
                 String message = ctx.queryParam("message");
