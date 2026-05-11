@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama;
+package io.github.partmeai.ollama;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.ai.chat.ChatResponse;

@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama.tools;
+package io.github.partmeai.ollama.tools;
 
 import com.alibaba.fastjson2.JSONObject;
 import com.fasterxml.jackson.annotation.JsonInclude;

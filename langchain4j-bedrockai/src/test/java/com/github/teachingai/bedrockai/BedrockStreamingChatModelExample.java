@@ -1,4 +1,4 @@
-package com.github.teachingai.bedrockai;
+package io.github.partmeai.bedrockai;
 
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.model.StreamingResponseHandler;

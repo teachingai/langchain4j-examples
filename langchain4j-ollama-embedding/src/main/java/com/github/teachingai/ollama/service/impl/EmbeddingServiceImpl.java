@@ -1,7 +1,7 @@
-package com.github.teachingai.ollama.service.impl;
+package io.github.partmeai.ollama.service.impl;
 
 import com.alibaba.fastjson2.JSONObject;
-import com.github.teachingai.ollama.service.IEmbeddingService;
+import io.github.partmeai.ollama.service.IEmbeddingService;
 import jakarta.servlet.http.Part;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.embedding.EmbeddingClient;

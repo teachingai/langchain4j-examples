@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama.testcontainers;
+package io.github.partmeai.ollama.testcontainers;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.chat.listener.ChatModelErrorContext;
 import dev.langchain4j.model.chat.listener.ChatModelListener;

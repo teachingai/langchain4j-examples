@@ -1,7 +1,7 @@
-package com.github.teachingai.mistralai;
+package io.github.partmeai.mistralai;
 
-import com.github.teachingai.mistralai.config.AppConfig;
-import com.github.teachingai.mistralai.router.ChatRouter;
+import io.github.partmeai.mistralai.config.AppConfig;
+import io.github.partmeai.mistralai.router.ChatRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

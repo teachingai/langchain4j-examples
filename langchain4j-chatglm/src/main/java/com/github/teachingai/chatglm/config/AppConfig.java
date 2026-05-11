@@ -1,4 +1,4 @@
-package com.github.teachingai.chatglm.config;
+package io.github.partmeai.chatglm.config;
 
 import java.util.Properties;
 

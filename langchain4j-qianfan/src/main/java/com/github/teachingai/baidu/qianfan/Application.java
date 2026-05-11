@@ -1,7 +1,7 @@
-package com.github.teachingai.baidu.qianfan;
+package io.github.partmeai.baidu.qianfan;
 
-import com.github.teachingai.baidu.qianfan.config.AppConfig;
-import com.github.teachingai.baidu.qianfan.router.ChatRouter;
+import io.github.partmeai.baidu.qianfan.config.AppConfig;
+import io.github.partmeai.baidu.qianfan.router.ChatRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

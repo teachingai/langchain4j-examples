@@ -1,4 +1,4 @@
-package com.github.teachingai.zhipuai.config;
+package io.github.partmeai.zhipuai.config;
 
 import java.util.Properties;
 

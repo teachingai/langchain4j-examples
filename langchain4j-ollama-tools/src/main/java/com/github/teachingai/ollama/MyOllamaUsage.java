@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama;
+package io.github.partmeai.ollama;
 
 import org.springframework.ai.chat.metadata.Usage;
 import org.springframework.util.Assert;

@@ -1,7 +1,7 @@
-package com.github.teachingai.chatglm;
+package io.github.partmeai.chatglm;
 
-import com.github.teachingai.chatglm.config.AppConfig;
-import com.github.teachingai.chatglm.router.ChatRouter;
+import io.github.partmeai.chatglm.config.AppConfig;
+import io.github.partmeai.chatglm.router.ChatRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

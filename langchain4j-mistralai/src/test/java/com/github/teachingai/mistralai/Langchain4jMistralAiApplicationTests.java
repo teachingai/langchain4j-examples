@@ -1,4 +1,4 @@
-package com.github.teachingai.mistralai;
+package io.github.partmeai.mistralai;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

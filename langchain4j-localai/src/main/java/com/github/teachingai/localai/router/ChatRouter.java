@@ -1,6 +1,6 @@
-package com.github.teachingai.localai.router;
+package io.github.partmeai.localai.router;
 
-import com.github.teachingai.localai.config.AppConfig;
+import io.github.partmeai.localai.config.AppConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

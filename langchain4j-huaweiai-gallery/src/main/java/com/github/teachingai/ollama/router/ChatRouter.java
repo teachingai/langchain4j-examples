@@ -1,6 +1,6 @@
-package com.github.teachingai.ollama.router;
+package io.github.partmeai.ollama.router;
 
-import com.github.teachingai.ollama.config.AppConfig;
+import io.github.partmeai.ollama.config.AppConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

@@ -1,4 +1,4 @@
-package com.github.teachingai.mistralai.config;
+package io.github.partmeai.mistralai.config;
 
 import java.util.Properties;
 

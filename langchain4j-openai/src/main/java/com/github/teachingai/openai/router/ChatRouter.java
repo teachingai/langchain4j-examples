@@ -1,7 +1,7 @@
-package com.github.teachingai.openai.router;
+package io.github.partmeai.openai.router;
 
-import com.github.teachingai.openai.config.AppConfig;
-import com.github.teachingai.openai.request.ApiRequest;
+import io.github.partmeai.openai.config.AppConfig;
+import io.github.partmeai.openai.request.ApiRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

@@ -1,4 +1,4 @@
-package com.github.teachingai.bedrockai.config;
+package io.github.partmeai.bedrockai.config;
 
 import software.amazon.awssdk.regions.Region;
 

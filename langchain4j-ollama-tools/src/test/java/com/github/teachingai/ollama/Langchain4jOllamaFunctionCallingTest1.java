@@ -1,6 +1,6 @@
-package com.github.teachingai.ollama;
+package io.github.partmeai.ollama;
 
-import com.github.teachingai.ollama.tools.GetWeatherFunction;
+import io.github.partmeai.ollama.tools.GetWeatherFunction;
 import dev.langchain4j.agent.tool.ToolSpecification;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;

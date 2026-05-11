@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama.service;
+package io.github.partmeai.ollama.service;
 
 import com.alibaba.fastjson2.JSONObject;
 import dev.langchain4j.data.document.Document;

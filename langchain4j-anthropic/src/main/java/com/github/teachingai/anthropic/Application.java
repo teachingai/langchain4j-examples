@@ -1,7 +1,7 @@
-package com.github.teachingai.anthropic;
+package io.github.partmeai.anthropic;
 
-import com.github.teachingai.anthropic.config.AppConfig;
-import com.github.teachingai.anthropic.router.ChatRouter;
+import io.github.partmeai.anthropic.config.AppConfig;
+import io.github.partmeai.anthropic.router.ChatRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

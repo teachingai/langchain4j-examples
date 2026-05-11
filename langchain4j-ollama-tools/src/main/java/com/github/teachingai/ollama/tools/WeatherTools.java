@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama.tools;
+package io.github.partmeai.ollama.tools;
 
 public class WeatherTools {
     @Tool("Returns the weather forecast for a given city")

@@ -1,9 +1,9 @@
-package com.github.teachingai.ollama;
+package io.github.partmeai.ollama;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.github.teachingai.ollama.request.ApiRequest;
+import io.github.partmeai.ollama.request.ApiRequest;
 import org.springframework.ai.chat.prompt.ChatOptions;
 import org.springframework.ai.model.function.FunctionCallback;
 import org.springframework.ai.model.function.FunctionCallingOptions;

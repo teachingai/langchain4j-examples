@@ -1,4 +1,4 @@
-package com.github.teachingai.aisql.config;
+package io.github.partmeai.aisql.config;
 
 import java.util.Properties;
 

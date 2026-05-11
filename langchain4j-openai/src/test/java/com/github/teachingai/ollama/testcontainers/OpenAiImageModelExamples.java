@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama.testcontainers;
+package io.github.partmeai.ollama.testcontainers;
 
 import dev.langchain4j.chain.ConversationalRetrievalChain;
 import dev.langchain4j.data.document.Document;

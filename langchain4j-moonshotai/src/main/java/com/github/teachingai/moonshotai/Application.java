@@ -1,7 +1,7 @@
-package com.github.teachingai.moonshotai;
+package io.github.partmeai.moonshotai;
 
-import com.github.teachingai.moonshotai.config.AppConfig;
-import com.github.teachingai.moonshotai.router.ChatRouter;
+import io.github.partmeai.moonshotai.config.AppConfig;
+import io.github.partmeai.moonshotai.router.ChatRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

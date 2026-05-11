@@ -1,4 +1,4 @@
-package com.github.teachingai.config;
+package io.github.partmeai.config;
 
 import java.util.Properties;
 

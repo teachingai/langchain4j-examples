@@ -1,8 +1,8 @@
-package com.github.teachingai.openai.request;
+package io.github.partmeai.openai.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.github.teachingai.openai.util.ModelOptionsUtils;
+import io.github.partmeai.openai.util.ModelOptionsUtils;
 import org.springframework.boot.context.properties.bind.ConstructorBinding;
 
 import java.util.List;

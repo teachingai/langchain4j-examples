@@ -1,8 +1,8 @@
-package com.github.teachingai.openai;
+package io.github.partmeai.openai;
 
-import com.github.teachingai.openai.config.AppConfig;
-import com.github.teachingai.openai.router.ChatRouter;
-import com.github.teachingai.openai.router.ImageGenRouter;
+import io.github.partmeai.openai.config.AppConfig;
+import io.github.partmeai.openai.router.ChatRouter;
+import io.github.partmeai.openai.router.ImageGenRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

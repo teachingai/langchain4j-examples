@@ -1,4 +1,4 @@
-package com.github.teachingai.anthropic;
+package io.github.partmeai.anthropic;
 
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.model.StreamingResponseHandler;

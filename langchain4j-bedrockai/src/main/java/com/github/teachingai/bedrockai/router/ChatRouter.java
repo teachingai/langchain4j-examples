@@ -1,6 +1,6 @@
-package com.github.teachingai.bedrockai.router;
+package io.github.partmeai.bedrockai.router;
 
-import com.github.teachingai.bedrockai.config.AppConfig;
+import io.github.partmeai.bedrockai.config.AppConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

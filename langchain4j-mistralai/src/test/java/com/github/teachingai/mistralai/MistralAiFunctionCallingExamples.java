@@ -1,4 +1,4 @@
-package com.github.teachingai.mistralai;
+package io.github.partmeai.mistralai;
 
 import dev.langchain4j.agent.tool.*;
 import dev.langchain4j.data.message.AiMessage;

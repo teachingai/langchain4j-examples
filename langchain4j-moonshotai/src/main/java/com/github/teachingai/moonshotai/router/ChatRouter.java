@@ -1,6 +1,6 @@
-package com.github.teachingai.moonshotai.router;
+package io.github.partmeai.moonshotai.router;
 
-import com.github.teachingai.moonshotai.config.AppConfig;
+import io.github.partmeai.moonshotai.config.AppConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;
@@ -32,7 +32,7 @@ public class ChatRouter {
         
         try {
             // 尝试使用MoonshotAI特定的模型类
-            Class<?> chatModelClass = Class.forName("com.github.teachingai.langchain4j.moonshotai.MoonshotAiChatModel");
+            Class<?> chatModelClass = Class.forName("io.github.partmeai.langchain4j.moonshotai.MoonshotAiChatModel");
             Object builder = chatModelClass.getMethod("builder").invoke(null);
             builder = builder.getClass().getMethod("apiKey", String.class).invoke(builder, config.getMoonshotAiApiKey());
             builder = builder.getClass().getMethod("modelName", String.class).invoke(builder, config.getChatModel());
@@ -41,7 +41,7 @@ public class ChatRouter {
             
             // 尝试创建流式模型
             try {
-                Class<?> streamingModelClass = Class.forName("com.github.teachingai.langchain4j.moonshotai.MoonshotAiStreamingChatModel");
+                Class<?> streamingModelClass = Class.forName("io.github.partmeai.langchain4j.moonshotai.MoonshotAiStreamingChatModel");
                 Object streamingBuilder = streamingModelClass.getMethod("builder").invoke(null);
                 streamingBuilder = streamingBuilder.getClass().getMethod("apiKey", String.class).invoke(streamingBuilder, config.getMoonshotAiApiKey());
                 streamingBuilder = streamingBuilder.getClass().getMethod("modelName", String.class).invoke(streamingBuilder, config.getChatModel());

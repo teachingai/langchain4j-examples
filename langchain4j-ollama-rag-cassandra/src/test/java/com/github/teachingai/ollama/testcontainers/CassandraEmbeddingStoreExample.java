@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama.testcontainers;
+package io.github.partmeai.ollama.testcontainers;
 
 import java.util.List;
 

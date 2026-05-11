@@ -34,7 +34,7 @@
 替换 `@SpringBootApplication` 类为 Javalin 启动类：
 
 ```java
-package com.github.teachingai.{module};
+package io.github.partmeai.{module};
 
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
@@ -59,7 +59,7 @@ public class Application {
 从 `application.properties` 读取配置：
 
 ```java
-package com.github.teachingai.{module}.config;
+package io.github.partmeai.{module}.config;
 
 import java.util.Properties;
 
@@ -83,7 +83,7 @@ public class AppConfig {
 将 `@RestController` 改为 Javalin Router：
 
 ```java
-package com.github.teachingai.{module}.router;
+package io.github.partmeai.{module}.router;
 
 import io.javalin.Javalin;
 import io.javalin.http.Handler;

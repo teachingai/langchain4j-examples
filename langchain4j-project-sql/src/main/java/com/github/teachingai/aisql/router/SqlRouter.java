@@ -1,7 +1,7 @@
-package com.github.teachingai.aisql.router;
+package io.github.partmeai.aisql.router;
 
-import com.github.teachingai.aisql.config.AppConfig;
-import com.github.teachingai.aisql.exception.SqlGenerationException;
+import io.github.partmeai.aisql.config.AppConfig;
+import io.github.partmeai.aisql.exception.SqlGenerationException;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import dev.langchain4j.data.message.SystemMessage;

@@ -1,6 +1,6 @@
-package com.github.teachingai.baidu.qianfan.router;
+package io.github.partmeai.baidu.qianfan.router;
 
-import com.github.teachingai.baidu.qianfan.config.AppConfig;
+import io.github.partmeai.baidu.qianfan.config.AppConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

@@ -1,6 +1,6 @@
-package com.github.teachingai.ollama.router;
+package io.github.partmeai.ollama.router;
 
-import com.github.teachingai.ollama.config.AppConfig;
+import io.github.partmeai.ollama.config.AppConfig;
 import dev.langchain4j.data.embedding.Embedding;
 import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.model.ollama.OllamaEmbeddingModel;

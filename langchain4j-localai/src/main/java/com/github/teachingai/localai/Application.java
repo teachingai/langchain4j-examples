@@ -1,7 +1,7 @@
-package com.github.teachingai.localai;
+package io.github.partmeai.localai;
 
-import com.github.teachingai.localai.config.AppConfig;
-import com.github.teachingai.localai.router.ChatRouter;
+import io.github.partmeai.localai.config.AppConfig;
+import io.github.partmeai.localai.router.ChatRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

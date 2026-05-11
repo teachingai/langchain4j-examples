@@ -1,7 +1,7 @@
-package com.github.teachingai.azureopenai;
+package io.github.partmeai.azureopenai;
 
-import com.github.teachingai.azureopenai.config.AppConfig;
-import com.github.teachingai.azureopenai.router.ChatRouter;
+import io.github.partmeai.azureopenai.config.AppConfig;
+import io.github.partmeai.azureopenai.router.ChatRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

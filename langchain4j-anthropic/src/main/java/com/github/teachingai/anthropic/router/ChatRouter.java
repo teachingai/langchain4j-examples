@@ -1,7 +1,7 @@
-package com.github.teachingai.anthropic.router;
+package io.github.partmeai.anthropic.router;
 
-import com.github.teachingai.anthropic.config.AppConfig;
-import com.github.teachingai.anthropic.request.ApiRequest;
+import io.github.partmeai.anthropic.config.AppConfig;
+import io.github.partmeai.anthropic.request.ApiRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

@@ -1,4 +1,4 @@
-package com.github.teachingai.baidu.qianfan.config;
+package io.github.partmeai.baidu.qianfan.config;
 
 import java.util.Properties;
 

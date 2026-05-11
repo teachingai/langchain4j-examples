@@ -1,7 +1,7 @@
-package com.github.teachingai.zhipuai;
+package io.github.partmeai.zhipuai;
 
-import com.github.teachingai.zhipuai.config.AppConfig;
-import com.github.teachingai.zhipuai.router.ChatRouter;
+import io.github.partmeai.zhipuai.config.AppConfig;
+import io.github.partmeai.zhipuai.router.ChatRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

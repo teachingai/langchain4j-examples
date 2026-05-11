@@ -1,7 +1,7 @@
-package com.github.teachingai.dashscope;
+package io.github.partmeai.dashscope;
 
-import com.github.teachingai.dashscope.config.AppConfig;
-import com.github.teachingai.dashscope.router.ChatRouter;
+import io.github.partmeai.dashscope.config.AppConfig;
+import io.github.partmeai.dashscope.router.ChatRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

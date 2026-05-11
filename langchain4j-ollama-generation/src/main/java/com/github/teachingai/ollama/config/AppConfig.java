@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama.config;
+package io.github.partmeai.ollama.config;
 
 import java.util.Properties;
 

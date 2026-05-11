@@ -1,7 +1,7 @@
-package com.github.teachingai.openai.router;
+package io.github.partmeai.openai.router;
 
-import com.github.teachingai.openai.config.AppConfig;
-import com.github.teachingai.openai.request.ImageGenRequest;
+import io.github.partmeai.openai.config.AppConfig;
+import io.github.partmeai.openai.request.ImageGenRequest;
 import dev.langchain4j.data.image.Image;
 import dev.langchain4j.model.image.ImageModel;
 import dev.langchain4j.model.openai.OpenAiImageModel;

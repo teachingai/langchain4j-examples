@@ -1,7 +1,7 @@
-package com.github.teachingai.zhipuai.router;
+package io.github.partmeai.zhipuai.router;
 
-import com.github.teachingai.zhipuai.config.AppConfig;
-import com.github.teachingai.zhipuai.request.ApiRequest;
+import io.github.partmeai.zhipuai.config.AppConfig;
+import io.github.partmeai.zhipuai.request.ApiRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

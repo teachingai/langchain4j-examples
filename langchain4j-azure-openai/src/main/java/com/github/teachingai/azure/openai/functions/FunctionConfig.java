@@ -1,4 +1,4 @@
-package com.github.teachingai.azure.openai.functions;
+package io.github.partmeai.azure.openai.functions;
 
 import org.springframework.ai.model.function.FunctionCallback;
 import org.springframework.ai.model.function.FunctionCallbackWrapper;

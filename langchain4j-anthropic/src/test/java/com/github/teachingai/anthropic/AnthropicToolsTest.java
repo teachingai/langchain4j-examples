@@ -1,4 +1,4 @@
-package com.github.teachingai.anthropic;
+package io.github.partmeai.anthropic;
 
 import dev.langchain4j.agent.tool.Tool;
 import dev.langchain4j.model.anthropic.AnthropicChatModel;

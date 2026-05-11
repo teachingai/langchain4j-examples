@@ -1,7 +1,7 @@
-package com.github.teachingai.mistralai.router;
+package io.github.partmeai.mistralai.router;
 
-import com.github.teachingai.mistralai.config.AppConfig;
-import com.github.teachingai.mistralai.request.ApiRequest;
+import io.github.partmeai.mistralai.config.AppConfig;
+import io.github.partmeai.mistralai.request.ApiRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

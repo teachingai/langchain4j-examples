@@ -1,7 +1,7 @@
-package com.github.teachingai.qwen;
+package io.github.partmeai.qwen;
 
-import com.github.teachingai.qwen.config.AppConfig;
-import com.github.teachingai.qwen.router.ChatRouter;
+import io.github.partmeai.qwen.config.AppConfig;
+import io.github.partmeai.qwen.router.ChatRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

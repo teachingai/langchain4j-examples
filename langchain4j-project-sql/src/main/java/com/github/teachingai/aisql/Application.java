@@ -1,7 +1,7 @@
-package com.github.teachingai.aisql;
+package io.github.partmeai.aisql;
 
-import com.github.teachingai.aisql.config.AppConfig;
-import com.github.teachingai.aisql.router.SqlRouter;
+import io.github.partmeai.aisql.config.AppConfig;
+import io.github.partmeai.aisql.router.SqlRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

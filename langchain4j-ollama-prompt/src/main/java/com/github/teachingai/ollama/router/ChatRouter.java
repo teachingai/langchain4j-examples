@@ -1,6 +1,6 @@
-package com.github.teachingai.ollama.router;
+package io.github.partmeai.ollama.router;
 
-import com.github.teachingai.ollama.config.AppConfig;
+import io.github.partmeai.ollama.config.AppConfig;
 import dev.langchain4j.data.message.UserMessage;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.input.Prompt;

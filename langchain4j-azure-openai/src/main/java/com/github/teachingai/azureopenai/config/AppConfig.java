@@ -1,4 +1,4 @@
-package com.github.teachingai.azureopenai.config;
+package io.github.partmeai.azureopenai.config;
 
 import java.util.Properties;
 

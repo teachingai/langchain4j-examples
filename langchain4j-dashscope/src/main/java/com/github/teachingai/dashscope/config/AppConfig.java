@@ -1,4 +1,4 @@
-package com.github.teachingai.dashscope.config;
+package io.github.partmeai.dashscope.config;
 
 import java.util.Properties;
 

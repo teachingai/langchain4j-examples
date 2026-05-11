@@ -1,7 +1,7 @@
-package com.github.teachingai.bedrockai;
+package io.github.partmeai.bedrockai;
 
-import com.github.teachingai.bedrockai.config.AppConfig;
-import com.github.teachingai.bedrockai.router.ChatRouter;
+import io.github.partmeai.bedrockai.config.AppConfig;
+import io.github.partmeai.bedrockai.router.ChatRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama.testcontainers;
+package io.github.partmeai.ollama.testcontainers;
 
 import dev.langchain4j.data.embedding.Embedding;
 import dev.langchain4j.model.embedding.EmbeddingModel;

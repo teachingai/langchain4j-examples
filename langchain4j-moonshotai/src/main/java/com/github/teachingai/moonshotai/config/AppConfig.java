@@ -1,4 +1,4 @@
-package com.github.teachingai.moonshotai.config;
+package io.github.partmeai.moonshotai.config;
 
 import java.util.Properties;
 

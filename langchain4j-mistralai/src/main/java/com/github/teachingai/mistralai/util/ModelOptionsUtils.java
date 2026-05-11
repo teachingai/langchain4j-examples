@@ -1,4 +1,4 @@
-package com.github.teachingai.mistralai.util;
+package io.github.partmeai.mistralai.util;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

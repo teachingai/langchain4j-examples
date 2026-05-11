@@ -1,6 +1,6 @@
-package com.github.teachingai.chatglm.router;
+package io.github.partmeai.chatglm.router;
 
-import com.github.teachingai.chatglm.config.AppConfig;
+import io.github.partmeai.chatglm.config.AppConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

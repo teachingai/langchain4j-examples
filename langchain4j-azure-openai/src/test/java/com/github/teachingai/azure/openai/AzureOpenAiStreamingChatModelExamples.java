@@ -1,4 +1,4 @@
-package com.github.teachingai.azure.openai;
+package io.github.partmeai.azure.openai;
 
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.model.StreamingResponseHandler;

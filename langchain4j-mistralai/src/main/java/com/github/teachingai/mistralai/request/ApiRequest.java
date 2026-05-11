@@ -1,8 +1,8 @@
-package com.github.teachingai.mistralai.request;
+package io.github.partmeai.mistralai.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.github.teachingai.mistralai.util.ModelOptionsUtils;
+import io.github.partmeai.mistralai.util.ModelOptionsUtils;
 import org.springframework.boot.context.properties.bind.ConstructorBinding;
 
 import java.util.List;

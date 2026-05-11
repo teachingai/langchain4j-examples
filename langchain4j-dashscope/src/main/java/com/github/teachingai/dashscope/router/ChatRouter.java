@@ -1,6 +1,6 @@
-package com.github.teachingai.dashscope.router;
+package io.github.partmeai.dashscope.router;
 
-import com.github.teachingai.dashscope.config.AppConfig;
+import io.github.partmeai.dashscope.config.AppConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

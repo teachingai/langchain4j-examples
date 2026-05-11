@@ -1,8 +1,8 @@
-package com.github.teachingai.ollama.router;
+package io.github.partmeai.ollama.router;
 
-import com.github.teachingai.ollama.config.AppConfig;
-import com.github.teachingai.ollama.request.ApiRequest;
-import com.github.teachingai.ollama.tools.FunctionConfig;
+import io.github.partmeai.ollama.config.AppConfig;
+import io.github.partmeai.ollama.request.ApiRequest;
+import io.github.partmeai.ollama.tools.FunctionConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.agent.tool.ToolSpecification;
 import dev.langchain4j.data.message.AiMessage;

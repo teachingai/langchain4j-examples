@@ -1,7 +1,7 @@
-package com.github.teachingai.ollama.router;
+package io.github.partmeai.ollama.router;
 
-import com.github.teachingai.ollama.config.AppConfig;
-import com.github.teachingai.ollama.service.EmbeddingService;
+import io.github.partmeai.ollama.config.AppConfig;
+import io.github.partmeai.ollama.service.EmbeddingService;
 import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.DocumentParser;
 import dev.langchain4j.data.document.DocumentSplitter;

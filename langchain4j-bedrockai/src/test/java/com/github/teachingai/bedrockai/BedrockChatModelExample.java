@@ -1,4 +1,4 @@
-package com.github.teachingai.bedrockai;
+package io.github.partmeai.bedrockai;
 
 import dev.langchain4j.model.bedrock.BedrockAnthropicMessageChatModel;
 import dev.langchain4j.model.chat.ChatLanguageModel;

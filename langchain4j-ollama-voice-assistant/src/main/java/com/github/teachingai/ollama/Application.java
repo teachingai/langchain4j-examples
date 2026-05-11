@@ -1,8 +1,8 @@
-package com.github.teachingai.ollama;
+package io.github.partmeai.ollama;
 
-import com.github.teachingai.ollama.config.AppConfig;
-import com.github.teachingai.ollama.router.ChatRouter;
-import com.github.teachingai.ollama.router.EmbeddingRouter;
+import io.github.partmeai.ollama.config.AppConfig;
+import io.github.partmeai.ollama.router.ChatRouter;
+import io.github.partmeai.ollama.router.EmbeddingRouter;
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;
 import org.slf4j.Logger;

@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.github.teachingai</groupId>
+        <groupId>io.github.partmeai</groupId>
         <artifactId>langchain4j-examples</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
@@ -36,7 +36,7 @@
         </dependency>
         <!-- For Chat Completion & Embedding -->
         <!--<dependency>
-            <groupId>com.github.teachingai</groupId>
+            <groupId>io.github.partmeai</groupId>
             <artifactId>langchain4j-huawei</artifactId>
             <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
@@ -91,7 +91,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.github.teachingai.huaweiai.pangu.Application</mainClass>
+                                    <mainClass>io.github.partmeai.huaweiai.pangu.Application</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

@@ -1,4 +1,4 @@
-package com.github.teachingai.openai.util;
+package io.github.partmeai.openai.util;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

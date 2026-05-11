@@ -14,7 +14,7 @@
 <dependencies>
     <!-- For Langchain4j Common -->
     <dependency>
-        <groupId>com.github.teachingai</groupId>
+        <groupId>io.github.partmeai</groupId>
         <artifactId>langchain4j-common</artifactId>
         <version>${revision}</version>
     </dependency>
@@ -64,7 +64,7 @@
                     <configuration>
                         <transformers>
                             <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                <mainClass>com.github.teachingai.{module}.Application</mainClass>
+                                <mainClass>io.github.partmeai.{module}.Application</mainClass>
                             </transformer>
                         </transformers>
                     </configuration>
@@ -78,7 +78,7 @@
 ## 标准 Application 类模板
 
 ```java
-package com.github.teachingai.{module};
+package io.github.partmeai.{module};
 
 import io.javalin.Javalin;
 import io.javalin.json.JavalinJackson;

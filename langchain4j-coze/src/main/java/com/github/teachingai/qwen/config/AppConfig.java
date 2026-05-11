@@ -1,4 +1,4 @@
-package com.github.teachingai.qwen.config;
+package io.github.partmeai.qwen.config;
 
 import java.util.Properties;
 

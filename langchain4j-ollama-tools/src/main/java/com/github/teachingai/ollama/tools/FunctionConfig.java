@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama.tools;
+package io.github.partmeai.ollama.tools;
 
 import dev.langchain4j.agent.tool.ToolSpecification;
 import dev.langchain4j.agent.tool.ToolSpecifications;

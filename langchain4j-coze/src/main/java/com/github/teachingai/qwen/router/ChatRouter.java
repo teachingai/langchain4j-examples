@@ -1,6 +1,6 @@
-package com.github.teachingai.qwen.router;
+package io.github.partmeai.qwen.router;
 
-import com.github.teachingai.qwen.config.AppConfig;
+import io.github.partmeai.qwen.config.AppConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ChatMessage;

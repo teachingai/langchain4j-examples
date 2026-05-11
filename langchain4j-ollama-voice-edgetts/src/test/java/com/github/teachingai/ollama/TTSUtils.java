@@ -1,4 +1,4 @@
-package com.github.teachingai.ollama;
+package io.github.partmeai.ollama;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.exec.CommandLine;

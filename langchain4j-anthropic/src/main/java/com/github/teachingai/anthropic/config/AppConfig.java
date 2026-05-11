@@ -1,4 +1,4 @@
-package com.github.teachingai.anthropic.config;
+package io.github.partmeai.anthropic.config;
 
 import java.util.Properties;
 
